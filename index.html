@@ -1,0 +1,909 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Vishnu Prasanth A — Cybersecurity Engineer & Developer</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Official portfolio of Vishnu Prasanth A — Aspiring Cybersecurity Engineer, Software Developer, and IoT Innovator. Projects in ML, Pentesting, Embedded Systems, and Automation.">
+<meta name="keywords" content="Vishnu Prasanth A, Vishnu Prasanth, Cybersecurity, Portfolio, Developer, IoT, Machine Learning, Penetration Testing, Automation, Software Engineer">
+<meta name="author" content="Vishnu Prasanth A">
+<meta name="google-site-verification" content="KD4UJq4FMxRFgZozqqZ18zGeuPSkwJtJMX7oAko4j40" />
+<!-- Open Graph (for social media previews) -->
+<meta property="og:title" content="Vishnu Prasanth A — Cybersecurity Engineer & Developer">
+<meta property="og:description" content="Explore projects, skills, and experience of Vishnu Prasanth A. Specializing in Cybersecurity, IoT, ML, and Automation.">
+<meta property="og:image" content="https://vishnuprasanth-a.web.app/profile.jpg">
+<meta property="og:url" content="https://vishnuprasanth-a.web.app/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Canonical Link -->
+<link rel="canonical" href="https://vishnuprasanth-a.web.app/">
+
+<!-- Favicon -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<style>
+  :root{
+    --bg1:#061017;
+    --bg2:#0b1220;
+    --card:#0f1720;
+    --muted:#9aa6b2;
+    --accent:#0e83ff;
+    --accent-2:#00c3a3;
+    --glass: rgba(255,255,255,0.03);
+    --shadow: 0 12px 40px rgba(2,6,23,0.7);
+    --radius:14px;
+    --glass-2: rgba(255,255,255,0.02);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+    background: linear-gradient(180deg,var(--bg1),var(--bg2));
+    color:#e6eef5;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.5;
+    overflow-x:hidden;
+  }
+
+  /* background canvas */
+  canvas#bg-animation{
+    position:fixed;inset:0;width:100%;height:100%;z-index:-2;display:block;
+    background: linear-gradient(180deg, rgba(5,10,15,0.45), rgba(8,12,18,0.45));
+    transition:filter .35s ease,opacity .35s ease;
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.6));
+  }
+  /* subtle circuit overlay */
+  .circuit-overlay{
+    position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:0.14;
+    background-image: radial-gradient(circle at 10% 10%, rgba(255,255,255,0.02), transparent 20%),
+                      linear-gradient(90deg, rgba(14,131,255,0.02), rgba(0,195,163,0.02));
+    mix-blend-mode: screen;
+    transition:opacity .25s ease;
+  }
+
+  .container{max-width:1100px;margin:0 auto;padding:28px;position:relative;z-index:2}
+  header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+  .brand{display:flex;gap:12px;align-items:center}
+  .logo{
+    width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:22px;box-shadow:var(--shadow)
+  }
+  nav a{margin-left:10px;text-decoration:none;color:var(--muted);font-weight:600;padding:8px 12px;border-radius:10px;transition:all .18s ease}
+  nav a:hover{background:rgba(14,131,255,0.08);color:var(--accent)}
+
+  /* floating resume button */
+  .floating-resume{
+    position:fixed;right:20px;bottom:24px;z-index:9999;
+    display:inline-flex;align-items:center;gap:10px;padding:12px 14px;border-radius:999px;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;font-weight:700;box-shadow:0 12px 30px rgba(14,131,255,0.18);
+    text-decoration:none;border:none;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .floating-resume:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(14,131,255,0.22)}
+
+  /* hero */
+  .hero-wrap{position:relative;overflow:hidden;border-radius:var(--radius);margin-bottom:18px}
+  .hero{
+    position:relative;z-index:1;display:flex;gap:24px;align-items:center;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));backdrop-filter: blur(6px);
+    box-shadow:var(--shadow);
+  }
+  .hero-left{flex:1;min-width:220px}
+  .hero h1{margin:0;font-size:26px;color:#eaf6ff}
+  .hero p.lead{margin:10px 0;color:var(--muted);font-size:15px}
+  .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);text-decoration:none;font-weight:700;
+    background:transparent;color:var(--accent);cursor:pointer;
+  }
+  .btn.primary{
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;border:none;box-shadow:0 10px 40px rgba(14,131,255,0.12)
+  }
+  .btn.ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.03)}
+  .btn:hover{transform:translateY(-4px)}
+
+  .hero-right{width:200px;display:flex;flex-direction:column;align-items:center;gap:10px}
+  .avatar-wrap{position:relative;width:160px;height:160px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .avatar-border{
+    position:absolute;inset:0;border-radius:50%;display:block;padding:7px;background:conic-gradient(from 90deg, rgba(14,131,255,0.18), rgba(0,195,163,0.08));
+    filter:blur(6px);opacity:.9;transition:transform .4s ease,opacity .3s ease;
+    animation:spin 8s linear infinite;
+  }
+  @keyframes spin{ from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
+  .avatar{
+    width:100%;height:100%;border-radius:50%;overflow:hidden;border:6px solid rgba(10,14,18,0.6);box-shadow:0 14px 40px rgba(2,6,23,0.6);background:#0b1220;display:flex;align-items:center;justify-content:center;
+    transition:transform .28s ease;
+  }
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  .avatar-wrap:hover .avatar{transform:scale(1.06)}
+  .avatar-wrap:hover .avatar-border{opacity:1;transform:scale(1.03)}
+
+  /* sections */
+  section{margin-top:28px}
+  h2.section-title{margin:0 0 12px 0;font-size:18px;color:#eaf6ff;position:relative}
+  h2.section-title small{display:block;color:var(--muted);font-weight:600;margin-top:6px;font-size:13px}
+
+  /* grid & cards */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,0.02);transition:transform .28s ease,box-shadow .28s ease,filter .18s ease}
+  .card:hover{transform:translateY(-8px) scale(1.02);box-shadow:0 28px 120px rgba(14,131,255,0.25);filter:brightness(1.06)}
+
+  .project-title{display:flex;align-items:center;gap:12px}
+  .dot{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,#071827,#0a2a3b);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;color:var(--accent)}
+  .project-desc{color:var(--muted);font-size:14px;margin:10px 0}
+  .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .tag{background:linear-gradient(90deg,rgba(14,131,255,0.03),rgba(0,195,163,0.02));padding:6px 10px;border-radius:999px;font-size:12px;color:var(--muted);border:1px solid rgba(255,255,255,0.02)}
+
+  /* metrics */
+  .metrics{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+  .metric{background:rgba(255,255,255,0.02);padding:8px 10px;border-radius:10px;font-weight:700;color:#dff8f1;font-size:13px;border:1px solid rgba(255,255,255,0.02)}
+
+  /* skills */
+  .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
+  .skill{display:flex;flex-direction:column;gap:6px;padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
+  .skill .name{font-weight:700;color:#dff8f1}
+  .skill .sub{font-size:13px;color:var(--muted)}
+  .skill:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(14,131,255,0.12);filter:brightness(1.08)}
+
+  /* certifications list */
+  .list{display:flex;flex-direction:column;gap:10px}
+  .small{font-size:13px;color:var(--muted)}
+
+  /* footer */
+  footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px;padding-bottom:40px}
+
+  /* back to top */
+  .back-to-top{position:fixed;bottom:90px;right:20px;background:transparent;border-radius:999px;padding:8px 10px;border:1px solid rgba(255,255,255,0.04);display:none;z-index:999;color:var(--muted)}
+  .back-to-top.show{display:inline-flex;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+
+  /* highlight class for canvas when skills visible */
+  .canvas-bright{filter:brightness(1.25) saturate(1.15);opacity:1}
+
+  /* responsive */
+  @media (max-width:900px){ .hero{flex-direction:column;align-items:flex-start}.hero-right{width:100%;flex-direction:row;justify-content:center} }
+  @media (max-width:480px){ .container{padding:18px} .logo{width:52px;height:52px;font-size:18px} .avatar{width:120px;height:120px} .dot{width:44px;height:44px;font-size:14px} }
+</style>
+</head>
+<body>
+
+<canvas id="bg-animation" aria-hidden="true"></canvas>
+<div class="circuit-overlay" aria-hidden="true"></div>
+
+<!-- floating resume -->
+<a class="floating-resume" href="resume.pdf" download aria-label="Download Resume">
+  <i class="fa fa-download" style="font-size:16px"></i> Resume
+</a>
+
+<div class="container">
+
+  <!-- header -->
+  <header data-aos="fade-down">
+    <div class="brand">
+      <div class="logo">VP</div>
+      <div>
+        <div style="font-weight:800;font-size:14px;color:#eaf6ff">Vishnu Prasanth</div>
+        <div id="typed-role" style="font-size:13px;color:var(--muted)"></div>
+      </div>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certs">Certifications</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- hero -->
+  <div class="hero-wrap" aria-hidden="false">
+    <section class="hero" id="top" data-aos="zoom-in">
+      <div class="hero-left">
+        <h1>Objective</h1>
+        <p class="lead">Aspiring Cybersecurity Engineer & Software Developer with hands-on experience in full-stack development, network security, and IoT-based security tools. Proven ability to lead and execute technical projects and build secure, scalable systems.</p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="resume.pdf" target="_blank" aria-label="Open Resume"><i class="fa fa-file-download"></i> Download Resume</a>
+          <a class="btn ghost" href="mailto:vishnuprasanth.a.agri44@gmail.com"><i class="fa fa-envelope"></i> Email</a>
+          <a class="btn ghost" href="https://linkedin.com/in/vishnuprasantha1" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+
+      <div class="hero-right" aria-hidden="false">
+        <div class="avatar-wrap" title="Profile photo">
+          <span class="avatar-border" aria-hidden="true"></span>
+          <div class="avatar"><img src="profile.jpg" alt="Vishnu Prasanth — Profile"></div>
+        </div>
+        <div style="text-align:center">
+          <div style="font-weight:700">Coimbatore, Tamil Nadu</div>
+          <div class="small">+91 95669 86664</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- about -->
+  <section id="about" data-aos="fade-up">
+    <h2 class="section-title">About Me <small>Objective & Education</small></h2>
+    <div class="card">
+      <p><strong>Objective:</strong> Aspiring Cybersecurity Engineer & Software Developer with hands-on experience in full-stack development, network security, and IoT-based security tools. Proven ability to lead and execute technical projects, including embedded penetration testing tools and secure communication systems. Strong foundation in ethical hacking, threat modeling, and machine learning for anomaly detection.</p>
+
+      <p><strong>Education</strong></p>
+      <ul class="small" style="margin:8px 0 0 18px">
+	<li><strong>Minors in Cybersecurity and Data Privacy</strong> — Rathinam Technical Campus, Coimbatore. (2022 - 2026)</li>
+        <li><strong>B.Tech. Agricultural Engineering</strong> — Rathinam Technical Campus, Coimbatore. (2022 - 2026) • CGPA: 7.96</li>
+        <li><strong>HSC — Bio-Maths</strong> — Bishop Ubagaraswamy Hr. Sec. School, Tiruppur (2020 - 2021)</li>
+        <li><strong>SSLC</strong> — Bishop Ubagaraswamy Hr. Sec. School, Tiruppur (2018 - 2019)</li>
+      </ul>
+    </div>
+  </section>
+<!-- Include AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<section id="experience" class="container" style="padding:40px 20px;font-family:'Poppins',sans-serif;">
+  <h2 style="text-align:center;margin-bottom:30px;">Experience</h2>
+  
+  <div style="position:relative;margin-left:20px;">
+    <!-- Timeline Line -->
+    <div style="position:absolute;left:15px;top:0;bottom:0;width:2px;background:#ccc;"></div>
+    
+    <!-- Experience Card 1 -->
+    <div class="exp-card" style="margin-bottom:30px;position:relative;padding-left:40px;" data-aos="fade-right">
+      <div style="position:absolute;left:6px;top:25px;width:16px;height:16px;background:#ff9800;border-radius:50%;"></div>
+      <div style="background:#1e1e1e;padding:15px;border-radius:10px;transition:0.3s;">
+        <h3 style="margin-top:0;">Security Admin Associate L1 – Infotact Solutions <span style="color:#4caf50;font-size:14px;">(Ongoing)</span></h3>
+        <p style="margin:5px 0;color:#bbb;font-size:14px;"><strong>June 2025 – Present</strong> | Remote</p>
+        <ul style="margin:0;padding-left:20px;font-size:14px;color:#ccc;">
+          <li>Collaborating with development & IT teams to design and deploy secure systems.</li>
+          <li>Identifying & patching vulnerabilities using OWASP ZAP, Burp Suite, and scanners.</li>
+          <li>Participating in security audits, code reviews, and threat modeling.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Experience Card 2 -->
+    <div class="exp-card" style="margin-bottom:30px;position:relative;padding-left:40px;" data-aos="fade-left">
+      <div style="position:absolute;left:6px;top:25px;width:16px;height:16px;background:#2196f3;border-radius:50%;"></div>
+      <div style="background:#1e1e1e;padding:15px;border-radius:10px;transition:0.3s;">
+        <h3 style="margin-top:0;">Cybersecurity Intern – Navodita Infotech <span style="color:#f44336;font-size:14px;">(Completed)</span></h3>
+        <p style="margin:5px 0;color:#bbb;font-size:14px;"><strong>June 2025 – July 2025</strong> | Remote</p>
+        <ul style="margin:0;padding-left:20px;font-size:14px;color:#ccc;">
+          <li>Completed cybersecurity training with hands-on practical tasks.</li>
+          <li>Worked on real-world projects focusing on threat detection & vulnerability management.</li>
+          <li>Earned internship completion certificate for outstanding contribution.</li>
+        </ul>
+      </div>
+    </div>
+<!-- Experience Card: Embedded Systems & IoT Intern -->
+<div class="exp-card" style="margin-bottom:30px;position:relative;padding-left:40px;" data-aos="fade-left">
+  <div style="position:absolute;left:6px;top:25px;width:16px;height:16px;background:#9FEF00;border-radius:50%;"></div>
+  <div style="background:#1e1e1e;padding:15px;border-radius:10px;transition:0.3s;">
+    <h3 style="margin-top:0;">Embedded Systems & IoT Intern – MDB Electrosoft Pvt. Ltd. <span style="color:#f44336;font-size:14px;">(Completed)</span></h3>
+    <p style="margin:5px 0;color:#bbb;font-size:14px;"><strong>Dec 26, 2024 – Jan 9, 2025</strong> | Remote</p>
+    <ul style="margin:0;padding-left:20px;font-size:14px;color:#ccc;">
+      <li>Gained fundamentals of Internet of Things (IoT) and embedded systems.</li>
+      <li>Worked with IoT hardware components and sensor integration.</li>
+      <li>Handled data collection and cloud connectivity techniques.</li>
+      <li>Developed and deployed real-time IoT applications.</li>
+      <li>Successfully completed all assigned tasks with dedication and engagement.</li>
+    </ul>
+     </div>
+</div>
+
+    <!-- Experience Card 3 -->
+    <div class="exp-card" style="margin-bottom:30px;position:relative;padding-left:40px;" data-aos="fade-right">
+      <div style="position:absolute;left:6px;top:25px;width:16px;height:16px;background:#673ab7;border-radius:50%;"></div>
+      <div style="background:#1e1e1e;padding:15px;border-radius:10px;transition:0.3s;">
+        <h3 style="margin-top:0;">Technical Lead Intern – NanoThreads, AICRAISE <span style="color:#f44336;font-size:14px;">(Completed)</span></h3>
+        <p style="margin:5px 0;color:#bbb;font-size:14px;"><strong>Aug 2024 – Sep 2024</strong> | Coimbatore, India</p>
+        <ul style="margin:0;padding-left:20px;font-size:14px;color:#ccc;">
+          <li>Led IoT-based device development for fabric identification with 90% accuracy.</li>
+          <li>Implemented machine learning models for real-time classification.</li>
+          <li>Collaborated with cross-functional teams for API and backend integration.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Hover Effect CSS -->
+<style>
+  .exp-card:hover div {
+    background: #2a2a2a;
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+  }
+</style>
+
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
+
+  <!-- projects -->
+  <section id="projects" data-aos="fade-up">
+    <h2 class="section-title">🚀 Selected Projects <small>Impact, Tech & Summaries</small></h2>
+    <div class="grid">
+      <!-- Project 1 -->
+      <article class="card">
+        <div class="project-title">
+          <div class="dot">HF</div>
+          <div>
+            <h3>Handloom & Power loom Fabric Identifier</h3>
+            <div class="project-desc">IoT-based fabric identification system with edge ML, deployed on Raspberry Pi to classify fabric types in real time with strong data integrity protections.</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag"><i class="fa-brands fa-python"></i> Python</span>
+          <span class="tag">TensorFlow Lite</span>
+          <span class="tag">Raspberry Pi</span>
+          <span class="tag">OpenCV</span>
+          <span class="tag">SSD1306 OLED</span>
+        </div>
+        <div class="metrics">
+          <div class="metric">Accuracy: 90%</div>
+          <div class="metric">Edge Inference</div>
+          <div class="metric">Secure I2C comms</div>
+        </div>
+        <div style="margin-top:12px"><a class="btn" href="https://github.com/VishnuPrasanth-A/Handloom-or-Powerloom-.git" target="_blank"><i class="fa fa-external-link-alt"></i> View</a></div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="card">
+        <div class="project-title">
+          <div class="dot">V2</div>
+          <div>
+            <h3>VAJRA2025 — Autonomous Rover</h3>
+            <div class="project-desc">Autonomous agricultural rover for surveillance and precision farming. Edge computing using TFLite improved monitoring accuracy and reduced data transfer overhead.</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag">Robotics</span>
+          <span class="tag">Python</span>
+          <span class="tag">TensorFlow Lite</span>
+          <span class="tag">Firebase</span>
+        </div>
+        <div class="metrics">
+          <div class="metric">Monitoring accuracy +95%</div>
+          <div class="metric">Edge processing</div>
+          <div class="metric">Raspberry Pi</div>
+        </div>
+        <div style="margin-top:12px"><a class="btn" href="https://vajra-plus.web.app/" target="_blank"><i class="fa fa-external-link-alt"></i> View</a></div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="card">
+        <div class="project-title">
+          <div class="dot">AV</div>
+          <div>
+            <h3>Automated VAPT Report Generator</h3>
+            <div class="project-desc">Automated vulnerability scanning and reporting tool for a Kali Linux lab. Integrates Nmap, Nikto, and Metasploit to create structured security audit reports and PoCs.</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag">Kali Linux</span>
+          <span class="tag">Python</span>
+          <span class="tag">Nmap</span>
+          <span class="tag">Metasploit</span>
+        </div>
+        <div class="metrics">
+          <div class="metric">Auto-reporting</div>
+          <div class="metric">Real-time scanning</div>
+          <div class="metric">PoC generation</div>
+        </div>
+        <div style="margin-top:12px"><a class="btn" href="https://github.com/VishnuPrasanth-A/CyberSecurity-TeamG3-Project1" target="_blank"><i class="fa fa-external-link-alt"></i> View</a></div>
+      </article>
+
+      <!-- Project 4 -->
+      <article class="card">
+        <div class="project-title">
+          <div class="dot">GC</div>
+          <div>
+            <h3>GC — GameChanger WiFi Pentest Toolkit (ESP32)</h3>
+            <div class="project-desc">Standalone ESP32 pentesting toolkit with OLED UI — Wi-Fi scanning, deauth, fake AP creation, BLE control, packet sniffing and local dashboard.</div>
+          </div>
+        </div>
+        <div class="tags">
+          <span class="tag">C++</span>
+          <span class="tag">ESP32</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">SSD1306</span>
+        </div>
+        <div class="metrics">
+          <div class="metric">Standalone device</div>
+          <div class="metric">Local dashboard</div>
+          <div class="metric">ESP32 / PlatformIO</div>
+        </div>
+        <div style="margin-top:12px"><a class="btn" href="https://github.com/VishnuPrasanth-A/GC---GameChanger-Wifi-Tester" target="_blank"><i class="fa fa-external-link-alt"></i> View</a></div>
+      </article>
+	<!-- Project 5 -->
+<article class="card">
+  <div class="project-title">
+    <div class="dot">TI</div>
+    <div>
+      <h3>Telegram Image Classifier</h3>
+      <div class="project-desc">
+        CNN-based image classification bot built with TensorFlow, trained on the CIFAR-10 dataset (60,000 32x32 color images across 10 classes). 
+        Integrates with Telegram to allow users to send images and receive instant class predictions.
+      </div>
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag">Python</span>
+    <span class="tag">TensorFlow</span>
+    <span class="tag">CNN</span>
+    <span class="tag">Telegram Bot API</span>
+    <span class="tag">CIFAR-10</span>
+  </div>
+  <div class="metrics">
+    <div class="metric">Dataset: 60k images</div>
+    <div class="metric">Image size: 32x32</div>
+    <div class="metric">10 predefined classes</div>
+  </div>
+  <div style="margin-top:12px">
+    <a class="btn" href="https://github.com/VishnuPrasanth-A/Telegram-Image-classifier" target="_blank">
+      <i class="fa fa-external-link-alt"></i> View
+    </a>
+  </div>
+</article>
+	<!-- Project 6 -->
+<article class="card">
+  <div class="project-title">
+    <div class="dot">MQ</div>
+    <div>
+      <h3>Milk Quality Checking System <span style="color:var(--accent);font-size:12px;">(In Progress)</span></h3>
+      <div class="project-desc">
+        Developing an IoT + ML based system to monitor and evaluate milk quality in real time. 
+        The system uses multiple sensors to measure pH, temperature, conductivity, and fat content, 
+        and a trained ML model to detect possible adulteration or spoilage.
+      </div>
+    </div>
+  </div>
+  <div class="tags">
+    <span class="tag">Python</span>
+    <span class="tag">TensorFlow Lite</span>
+    <span class="tag">Raspberry Pi</span>
+    <span class="tag">IoT Sensors</span>
+    <span class="tag">Data Visualization</span>
+  </div>
+  <div class="metrics">
+    <div class="metric">pH, Temp, Conductivity</div>
+    <div class="metric">Real-time monitoring</div>
+    <div class="metric">Target Accuracy: 95%</div>
+  </div>
+  <div style="margin-top:12px">
+    <a class="btn ghost" href="#" onclick="alert('This project is still in development — code will be published soon!')">
+      <i class="fa fa-hourglass-half"></i> Coming Soon
+    </a>
+  </div>
+</article>
+    </div>
+  </section>
+  <!-- skills -->
+  <section id="skills" data-aos="fade-up">
+    <h2 class="section-title">💻 Technical & Cybersecurity Skills <small>Tools, IoT & ML</small></h2>
+    <div class="card" id="skills-card">
+      <div style="display:flex;flex-wrap:wrap;gap:18px">
+        <div style="flex:1;min-width:240px">
+          <h3 style="margin:0 0 8px 0">Core Tech</h3>
+          <div class="skills-grid" style="margin-top:8px">
+            <div class="skill"><div class="name">Python</div><div class="sub">Full-stack scripting, ML</div></div>
+            <div class="skill"><div class="name">Java</div><div class="sub">Android & backend</div></div>
+            <div class="skill"><div class="name">JavaScript / React</div><div class="sub">Frontend & dashboards</div></div> <div class="skill">
+        <div class="name">Bash Scripting</div>
+        <div class="sub">Automation & system administration</div>
+    </div>
+    <div class="skill">
+        <div class="name">PowerShell</div>
+        <div class="sub">Automation & Windows management</div>
+    </div>
+          </div>
+        </div>
+
+        <div style="flex:1;min-width:240px">
+          <h3 style="margin:0 0 8px 0">Cybersecurity</h3>
+          <div class="skills-grid" style="margin-top:8px">
+            <div class="skill"><div class="name">Penetration Testing</div><div class="sub">Nmap, Metasploit, Nikto</div></div>
+            <div class="skill"><div class="name">Digital Forensics</div><div class="sub">Evidence & investigation</div></div>
+            <div class="skill"><div class="name">Reverse Engineering</div><div class="sub">Binary analysis</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:18px;margin-top:16px">
+        <div style="flex:1;min-width:240px">
+          <h3 style="margin:0 0 8px 0">IoT & Embedded</h3>
+          <div class="skills-grid" style="margin-top:8px">
+            <div class="skill"><div class="name">Raspberry Pi</div><div class="sub">Edge ML & Linux</div></div>
+            <div class="skill"><div class="name">ESP32 / Arduino</div><div class="sub">Embedded systems</div></div>
+            <div class="skill"><div class="name">SSD1306 OLED</div><div class="sub">UI & I2C</div></div>
+          </div>
+        </div>
+
+        <div style="flex:1;min-width:240px">
+          <h3 style="margin:0 0 8px 0">ML & Data</h3>
+          <div class="skills-grid" style="margin-top:8px">
+            <div class="skill"><div class="name">TensorFlow Lite</div><div class="sub">Model optimization</div></div>
+            <div class="skill"><div class="name">Data Viz</div><div class="sub">Tableau, PowerBI</div></div>
+            <div class="skill"><div class="name">OpenCV</div><div class="sub">Image processing</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Include Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<div style="margin-top:14px;display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start">
+
+    <!-- Tools & Technologies -->
+    <div class="skill" style="flex:1;min-width:300px;">
+        <div class="name" style="font-weight:bold;font-size:1.1em;margin-bottom:6px;">
+            <i class="fas fa-tools" style="color:#ff9800;"></i> Tools & Technologies
+        </div>
+        <div class="sub" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Kali-dragon-icon.svg" alt="Kali" style="width:24px;height:24px;"> Kali Linux
+            <img src="https://assets.enterprisestorageforum.com/uploads/2023/04/nmap-vulnerability-scan.png" alt="Nmap" style="width:24px;height:24px;"> Nmap
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/OWASP_ZAP_logo.svg" alt="OWASP ZAP" style="width:24px;height:24px;"> OWASP ZAP
+            <img src="https://www.kali.org/tools/nikto/images/nikto-logo.svg" alt="Nikto" style="width:24px;height:24px;"> Nikto
+            <img src="https://www.kali.org/tools/metasploit-framework/images/metasploit-framework-logo.svg" alt="Metasploit" style="width:24px;height:24px;"> Metasploit
+            <img src="https://cdn4.iconfinder.com/data/icons/macaron-1/48/BurpSuite-512.png" alt="Burp Suite" style="width:24px;height:24px;"> Burp Suite
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Ghidra_logo.svg/2048px-Ghidra_logo.svg.png" alt="Ghidra" style="width:24px;height:24px;"> Ghidra
+            <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*sOhbhWnnmBx7TxHddLPW0Q.png" alt="Wireshark" style="width:24px;height:24px;"> Wireshark
+            <i class="fas fa-terminal" style="color:#4cafef;font-size:20px;"></i> Bash Scripting
+            <i class="fab fa-windows" style="color:#00adef;font-size:20px;"></i> PowerShell
+        </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="skill" style="flex:1;min-width:300px;">
+        <div class="name" style="font-weight:bold;font-size:1.1em;margin-bottom:6px;">
+            <i class="fas fa-user-check" style="color:#4caf50;"></i> Soft Skills
+        </div>
+        <div class="sub" style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;">
+            <i class="fas fa-users"></i> Leadership
+            <i class="fas fa-chalkboard-teacher"></i> Mentoring
+            <i class="fas fa-microphone"></i> Public Speaking
+            <i class="fas fa-lightbulb"></i> Problem-Solving
+            <i class="fas fa-handshake"></i> Team Collaboration
+            <i class="fas fa-brain"></i> Analytical Thinking<br>
+            <i class="fas fa-sync-alt"></i> Adaptability
+        </div>
+    </div>
+
+</div>
+  </section>
+
+<!-- certifications -->
+<section id="certs" data-aos="fade-up">
+  <h2 class="section-title">📜 Certifications <small>Professional & Online</small></h2>
+  <div class="grid">
+
+    <div class="card">
+      <strong>IBM Cybersecurity Analyst (Coursera)</strong>
+      <div class="small" style="margin-top:6px">Threat detection, incident response, and security practices.</div>
+    </div>
+
+    <div class="card">
+      <strong>Ethical Hacking Essentials (Coursera)</strong>
+      <div class="small" style="margin-top:6px">Vulnerability assessment & penetration fundamentals.</div>
+    </div>
+
+    <div class="card">
+      <strong>Digital Forensics Essentials (Coursera)</strong>
+      <div class="small" style="margin-top:6px">Evidence handling & system investigation.</div>
+    </div>
+
+    <div class="card">
+      <strong>Master Reverse Engineering (Udemy)</strong>
+      <div class="small" style="margin-top:6px">Binary analysis & vulnerability discovery.</div>
+    </div>
+
+    <div class="card">
+      <strong>Dart & Flutter Development (Udemy)</strong>
+      <div class="small" style="margin-top:6px">Cross-platform mobile apps and UI integration.</div>
+    </div>
+
+    <div class="card">
+      <strong>Master Android Application (Udemy)</strong>
+      <div class="small" style="margin-top:6px">Native Android development with Java/Kotlin.</div>
+    </div>
+
+    <div class="card">
+      <strong>EC-Council — SQL Injection Attacks</strong>
+      <div class="small" style="margin-top:6px">Focused course on identification & mitigation.</div>
+    </div>
+
+    <div class="card">
+      <strong>Forage Virtual Experience — Tata Cybersecurity Analyst</strong>
+      <div class="small" style="margin-top:6px">Hands-on IAM & access control simulation.</div>
+    </div>
+
+    <div class="card">
+      <strong>API Pentesting & Bug Bounty 101 (Cappriciosec University)</strong>
+      <div class="small" style="margin-top:6px">API vulnerability discovery & exploitation techniques.</div>
+    </div>
+
+    <div class="card">
+      <strong>Cybersecurity Career Webinar 101 (Cappriciosec University)</strong>
+      <div class="small" style="margin-top:6px">Career insights & pathways in cybersecurity.</div>
+    </div>
+
+    <div class="card">
+      <strong>SQL for Data Science (University of California, Davis - Coursera)</strong>
+      <div class="small" style="margin-top:6px">SQL queries, joins, and data analysis fundamentals.</div>
+    </div>
+
+    <div class="card">
+      <strong>Data Science Specialization (University of Maryland, College Park)</strong>
+      <div class="small" style="margin-top:6px">Data processing, cleaning, and visualization techniques.</div>
+    </div>
+
+    <div class="card">
+      <strong>Cryptography (Coursera)</strong>
+      <div class="small" style="margin-top:6px">Encryption, hashing, and cryptographic protocols.</div>
+    </div>
+
+    <div class="card">
+      <strong>Google Cybersecurity (Coursera)</strong>
+      <div class="small" style="margin-top:6px">Foundations of cybersecurity, threat detection, and mitigation.</div>
+    </div>
+
+    <div class="card">
+      <strong>Social Network Security (Coursera)</strong>
+      <div class="small" style="margin-top:6px">Security & privacy in online social platforms.</div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- achievements & languages -->
+  <section id="achievements" data-aos="fade-up">
+    <h2 class="section-title">🏆 Achievements & Languages</h2>
+    <div class="grid">
+      <div class="card list">
+        <div><strong>• 1st Prize</strong> — Paper Presentation at TECHFINIX'23</div>
+        <div>• Participated in GUVI’s Frontend Coding Championship</div>
+        <div>• Developed a Resume Assistance Generator in SaWiT.AI challenge</div>
+      </div>
+      <div class="card">
+        <strong>Languages</strong>
+        <div class="small" style="margin-top:8px">Tamil (Native) • English (Proficient)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <section id="contact" data-aos="fade-up">
+    <h2 class="section-title">📫 Contact</h2>
+    <div class="card">
+      <div class="list">
+        <div><strong>Phone:</strong> +91 95669 86664</div>
+        <div><strong>Email:</strong> <a href="mailto:vishnuprasanth.a.agri44@gmail.com" style="color:var(--accent)">vishnuprasanth.a.agri44@gmail.com</a></div>
+        <div><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vishnuprasantha1" target="_blank" style="color:var(--accent)">linkedin.com/in/vishnuprasantha1</a></div>
+        <div><strong>Location:</strong> Coimbatore, Tamil Nadu</div>
+      </div>
+    </div>
+  </section>
+
+<!-- Footer -->
+<footer style="background: linear-gradient(135deg, #1a1a1a, #2c2c2c); color: #fff; padding: 20px 0; text-align: center; font-family: 'Poppins', sans-serif;">
+    <div style="max-width: 800px; margin: auto; padding: 0 20px;">
+        
+        <!-- Footer text -->
+        <p style="margin: 0; font-size: 16px;">
+            Built with ❤️ by <span style="color: #ff9800; font-weight: 600;">Vishnu Prasanth</span>
+        </p>
+
+        <!-- Social Icons -->
+        <div style="margin-top: 10px; display: flex; justify-content: center; gap: 15px; font-size: 20px;">
+            <a href="https://github.com/VishnuPrasanth-A/ target="_blank" style="color: #bbb; text-decoration: none; transition: 0.3s;">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/vishnuprasantha1/" target="_blank" style="color: #bbb; text-decoration: none; transition: 0.3s;">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:vishnuprasanth.a.agri44@gmail.com" style="color: #bbb; text-decoration: none; transition: 0.3s;">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <!-- Hover Effects -->
+        <style>
+            footer a:hover {
+                color: #ff9800 !important;
+                transform: scale(1.2);
+            }
+            footer a {
+                display: inline-block;
+                transition: all 0.3s ease;
+            }
+        </style>
+    </div>
+</footer>
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</div>
+
+<!-- back to top -->
+<a href="#top" class="back-to-top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></a>
+
+<!-- scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  AOS.init({duration:800, once:true, offset:80});
+
+  // Typed.js role animation
+  new Typed("#typed-role", {
+    strings: ["Aspiring Cybersecurity Engineer","Software Developer","IoT Innovator","Malware Analyst (learning)"],
+    typeSpeed: 50, backSpeed: 25, loop: true
+  });
+
+  // Canvas neural network + bright circuit + interactive focus for skills
+  const canvas = document.getElementById("bg-animation");
+  const ctx = canvas.getContext("2d");
+  let W = innerWidth, H = innerHeight;
+  let nodes = [];
+  const NODE_COUNT = Math.max(60, Math.floor(W*H/90000)); // more nodes -> brighter
+
+  let focusPoints = []; // moving focus points (mouse, section highlight)
+
+  function resize(){
+    W = canvas.width = innerWidth;
+    H = canvas.height = innerHeight;
+    nodes = [];
+    for(let i=0;i<NODE_COUNT;i++){
+      nodes.push({
+        x: Math.random()*W,
+        y: Math.random()*H,
+        r: 1.2 + Math.random()*2.4,
+        vx: (Math.random()-0.5)*0.9,
+        vy: (Math.random()-0.5)*0.9,
+        phase: Math.random()*Math.PI*2
+      });
+    }
+  }
+  window.addEventListener('resize', resize, {passive:true});
+  resize();
+
+  // track mouse focus for brighter region
+  window.addEventListener('mousemove', (e)=>{
+    focusPoints[0] = {x: e.clientX, y: e.clientY, ttl: 120};
+  }, {passive:true});
+
+  // IntersectionObserver to boost brightness when skills visible
+  const skillsSection = document.getElementById('skills');
+  const observer = new IntersectionObserver(entries =>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        canvas.classList.add('canvas-bright');
+        // add a focused point at center of skills for a short while
+        const rect = e.target.getBoundingClientRect();
+        focusPoints.push({x: rect.left + rect.width/2, y: rect.top + rect.height/2, ttl: 360});
+      } else {
+        canvas.classList.remove('canvas-bright');
+      }
+    })
+  }, {threshold: 0.28});
+  if(skillsSection) observer.observe(skillsSection);
+
+  function step(t){
+    ctx.clearRect(0,0,W,H);
+
+    // soft background gradient
+    const g = ctx.createLinearGradient(0,0,W,H);
+    g.addColorStop(0, 'rgba(14,131,255,0.06)');
+    g.addColorStop(1, 'rgba(0,195,163,0.04)');
+    ctx.fillStyle = g;
+    ctx.fillRect(0,0,W,H);
+
+    // update focusPoints TTL
+    focusPoints = focusPoints.filter(fp=> fp && fp.ttl>0).map(fp=>({x:fp.x,y:fp.y,ttl:fp.ttl-1}));
+
+    // move nodes
+    for(let i=0;i<nodes.length;i++){
+      const n = nodes[i];
+      n.x += n.vx + Math.sin((t/900)+i)*0.12;
+      n.y += n.vy + Math.cos((t/1100)+i)*0.12;
+      n.phase += 0.01;
+      if(n.x < -20) n.x = W+20;
+      if(n.x > W+20) n.x = -20;
+      if(n.y < -20) n.y = H+20;
+      if(n.y > H+20) n.y = -20;
+
+      // base glow influenced by proximity to focus points
+      let intensity = 0.18 + 0.6 * Math.abs(Math.sin(n.phase));
+      for(const fp of focusPoints){
+        const dx = n.x - fp.x; const dy = n.y - fp.y; const d2 = dx*dx + dy*dy;
+        const influence = Math.max(0, 1 - (d2 / (220*220)));
+        intensity += influence * 0.9; // stronger near focus
+      }
+      intensity = Math.min(1.8, intensity);
+
+      ctx.beginPath();
+      ctx.fillStyle = "rgba(0,195,163," + (0.12 * intensity) + ")";
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI*2);
+      ctx.fill();
+    }
+
+    // connect close nodes - make lines brighter near focus
+    for(let i=0;i<nodes.length;i++){
+      for(let j=i+1;j<nodes.length;j++){
+        const a = nodes[i], b = nodes[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const d2 = dx*dx + dy*dy;
+        if(d2 < 220*220){
+          const dist = Math.sqrt(d2);
+          let opacity = 0.08 * (1 - dist/220);
+          // increase opacity if either node near focus
+          for(const fp of focusPoints){
+            const dax = a.x - fp.x, day = a.y - fp.y;
+            const dbx = b.x - fp.x, dby = b.y - fp.y;
+            const inf = Math.max(0, 1 - ( (dax*dax+day*day) / (240*240) ));
+            const inf2= Math.max(0, 1 - ( (dbx*dbx+dby*dby) / (240*240) ));
+            opacity += (inf + inf2) * 0.06;
+          }
+          ctx.strokeStyle = "rgba(14,131,255," + Math.min(0.9, opacity) + ")";
+          ctx.lineWidth = 1;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // faint moving circuit lines (thin) - slightly brighter overall
+    ctx.beginPath();
+    ctx.strokeStyle = "rgba(255,255,255,0.02)";
+    ctx.lineWidth = 1.2;
+    for(let y=0;y<H;y+=100){
+      ctx.moveTo(0, y + (Math.sin(t/500 + y/300)*12));
+      ctx.lineTo(W, y + (Math.sin(t/500 + y/300)*12));
+    }
+    ctx.stroke();
+
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+
+  // Smooth click feedback on buttons
+  document.querySelectorAll('.btn, .floating-resume').forEach(el=>{
+    el.addEventListener('mousedown', ()=> el.style.transform = 'translateY(-3px) scale(.995)');
+    el.addEventListener('mouseup', ()=> el.style.transform = '');
+    el.addEventListener('mouseleave', ()=> el.style.transform = '');
+  });
+
+  // Back-to-top visibility
+  const back = document.querySelector('.back-to-top');
+  window.addEventListener('scroll', ()=>{
+    back.classList.toggle('show', window.scrollY > 320);
+  }, {passive:true});
+
+  // Accessibility: focus outline for keyboard users
+  document.body.addEventListener('keyup', (e)=>{
+    if(e.key === 'Tab') document.documentElement.style.scrollBehavior = 'smooth';
+  });
+
+  // small UX: when hovering skills card, push a short focus point to canvas
+  document.querySelectorAll('#skills .skill').forEach(k =>{
+    k.addEventListener('mouseenter', (ev)=>{
+      const r = ev.target.getBoundingClientRect();
+      focusPoints.push({x: r.left + r.width/2, y: r.top + r.height/2, ttl: 140});
+    });
+  });
+
+</script>
+</body>
+</html>
