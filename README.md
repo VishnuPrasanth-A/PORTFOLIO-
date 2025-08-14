@@ -96,6 +96,5 @@ This portfolio website is designed to:
 
 This project is **open-source** and available under the [MIT License](LICENSE).
 
-```
 
 
