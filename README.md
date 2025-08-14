@@ -58,7 +58,7 @@ This portfolio website is designed to:
 2. **Navigate to the project folder**:
 
    ```bash
-   cd your-portfolio
+   cd PORTFOLIO
    ```
 
 3. **Open `index.html` in your browser**:
@@ -106,4 +106,5 @@ This fixes:
 
 If you want, I can also **add a GitHub-friendly project preview image** at the top so the repo looks visually attractive. That’s often the first thing recruiters notice.
 ```
+
 
