@@ -1,8 +1,6 @@
 ````markdown
  🌟 Vishnu Prasanth A – Personal Portfolio Website
 
-![Portfolio Preview](preview.png)
-
 Welcome to my **Personal Portfolio Website** project!  
 This site showcases my skills, projects, and achievements in a clean and responsive design, built to serve as my professional presence on the web.
 
@@ -100,5 +98,6 @@ This portfolio website is designed to:
 This project is **open-source** and available under the [MIT License](LICENSE).
 
 ```
+
 
 
