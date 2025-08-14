@@ -53,7 +53,7 @@ This portfolio website is designed to:
 
 1. **Clone the repository**:
    ```bash
-   git clone [https://github.com/your-username/your-portfolio.git](https://github.com/VishnuPrasanth-A/PORTFOLIO.git)
+   git clone https://github.com/VishnuPrasanth-A/PORTFOLIO.git
    
 2. **Navigate to the project folder**:
 
@@ -106,3 +106,4 @@ This fixes:
 
 If you want, I can also **add a GitHub-friendly project preview image** at the top so the repo looks visually attractive. That’s often the first thing recruiters notice.
 ```
+
