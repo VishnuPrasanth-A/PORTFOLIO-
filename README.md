@@ -98,13 +98,4 @@ This project is **open-source** and available under the [MIT License](LICENSE).
 
 ```
 
-This fixes:
-- Improper Markdown block formatting.
-- Corrected broken link in the **Live Demo** section.
-- Fixed email typo (`gmai.com` → `gmail.com`).
-- Aligned bullet points and headings properly.
-
-If you want, I can also **add a GitHub-friendly project preview image** at the top so the repo looks visually attractive. That’s often the first thing recruiters notice.
-```
-
 
