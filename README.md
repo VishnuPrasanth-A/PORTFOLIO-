@@ -1,5 +1,5 @@
 ````markdown
-# 🌟 Vishnu Prasanth A – Personal Portfolio Website
+ 🌟 Vishnu Prasanth A – Personal Portfolio Website
 
 ![Portfolio Preview](preview.png)
 
@@ -8,7 +8,7 @@ This site showcases my skills, projects, and achievements in a clean and respons
 
 ---
 
-## 📜 Table of Contents
+ 📜 Table of Contents
 - [About](#about)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
@@ -20,7 +20,7 @@ This site showcases my skills, projects, and achievements in a clean and respons
 
 ---
 
-## 📌 About
+ 📌 About
 This portfolio website is designed to:
 - Highlight my **skills, projects, and experience**.
 - Serve as an **online resume** and **project showcase**.
@@ -28,7 +28,7 @@ This portfolio website is designed to:
 
 ---
 
-## ✨ Features
+ ✨ Features
 - **Fully Responsive** – Works perfectly on mobile, tablet, and desktop.
 - **Modern UI/UX** – Clean, minimal, and user-friendly design.
 - **Projects Section** – Showcasing my top 6 projects with descriptions and live links.
@@ -37,7 +37,7 @@ This portfolio website is designed to:
 
 ---
 
-## 🛠 Tech Stack
+ 🛠 Tech Stack
 - **HTML5**
 - **CSS3**
 - **JavaScript**
@@ -47,8 +47,8 @@ This portfolio website is designed to:
 
 ---
 
-## 🌍 Live Demo
-🔗 **[View My Portfolio](https://your-username.github.io/your-portfolio/)**
+ 🌍 Live Demo
+🔗 **[View My Portfolio]([https://your-username.github.io/your-portfolio/](https://vishnuprasanth-a.web.app/))**
 
 ---
 
@@ -101,3 +101,4 @@ This portfolio website is designed to:
 This project is **open-source** and available under the [MIT License](LICENSE).
 
 ```
+
