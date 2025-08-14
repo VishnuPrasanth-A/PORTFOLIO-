@@ -1,12 +1,11 @@
-````markdown
- 🌟 Vishnu Prasanth A – Personal Portfolio Website
+# 🌟 Vishnu Prasanth A – Personal Portfolio Website
 
 Welcome to my **Personal Portfolio Website** project!  
 This site showcases my skills, projects, and achievements in a clean and responsive design, built to serve as my professional presence on the web.
 
 ---
 
- 📜 Table of Contents
+## 📜 Table of Contents
 - [About](#about)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
@@ -18,7 +17,7 @@ This site showcases my skills, projects, and achievements in a clean and respons
 
 ---
 
- 📌 About
+## 📌 About
 This portfolio website is designed to:
 - Highlight my **skills, projects, and experience**.
 - Serve as an **online resume** and **project showcase**.
@@ -26,7 +25,7 @@ This portfolio website is designed to:
 
 ---
 
- ✨ Features
+## ✨ Features
 - **Fully Responsive** – Works perfectly on mobile, tablet, and desktop.
 - **Modern UI/UX** – Clean, minimal, and user-friendly design.
 - **Projects Section** – Showcasing my top 6 projects with descriptions and live links.
@@ -35,7 +34,7 @@ This portfolio website is designed to:
 
 ---
 
- 🛠 Tech Stack
+## 🛠 Tech Stack
 - **HTML5**
 - **CSS3**
 - **JavaScript**
@@ -45,17 +44,17 @@ This portfolio website is designed to:
 
 ---
 
- 🌍 Live Demo
-🔗 **[View My Portfolio]([https://your-username.github.io/your-portfolio/](https://vishnuprasanth-a.web.app/))**
+## 🌍 Live Demo
+🔗 **[View My Portfolio](https://vishnuprasanth-a.web.app/)**
 
 ---
- 🚀 Installation
+
+## 🚀 Installation
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/your-portfolio.git
-````
-
+   git clone [https://github.com/your-username/your-portfolio.git](https://github.com/VishnuPrasanth-A/PORTFOLIO.git)
+   
 2. **Navigate to the project folder**:
 
    ```bash
@@ -89,7 +88,7 @@ This portfolio website is designed to:
 * **Name:** Vishnu Prasanth A
 * **Portfolio:** [vishnuprasanth-a.web.app](https://vishnuprasanth-a.web.app)
 * **LinkedIn:** [linkedin.com/in/vishnuprasanth-a](https://linkedin.com/in/vishnuprasanth-a)
-* **Email:** [vishnuprasanth.a.agri44@gmai.com](mailto:your.email@example.com)
+* **Email:** [vishnuprasanth.a.agri44@gmail.com](mailto:vishnuprasanth.a.agri44@gmail.com)
 
 ---
 
@@ -99,5 +98,11 @@ This project is **open-source** and available under the [MIT License](LICENSE).
 
 ```
 
+This fixes:
+- Improper Markdown block formatting.
+- Corrected broken link in the **Live Demo** section.
+- Fixed email typo (`gmai.com` → `gmail.com`).
+- Aligned bullet points and headings properly.
 
-
+If you want, I can also **add a GitHub-friendly project preview image** at the top so the repo looks visually attractive. That’s often the first thing recruiters notice.
+```
